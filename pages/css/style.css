@@ -1,0 +1,1007 @@
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../../assets/fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../../assets/fonts/montserrat-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-500 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+    url('../../assets/fonts/montserrat-v15-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../../assets/fonts/montserrat-v15-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-600 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+    url('../../assets/fonts/montserrat-v15-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../../assets/fonts/montserrat-v15-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-800 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    src: local(''),
+    url('../../assets/fonts/montserrat-v15-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../../assets/fonts/montserrat-v15-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*      HEADER START        */
+.hidden__h1{
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+header {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background: #F58021;
+}
+
+.header__wrapper {
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header__logo {
+    padding: 30px 0 30px 0;
+}
+
+.header__burger {
+    position: absolute;
+    z-index: 12;
+    top: 40px;
+    right: 48px;
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.header__burger::before {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #000000;
+}
+
+.header__burger::after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #000000;
+}
+
+.header__burger span {
+    position: absolute;
+    top: 14px;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    /*align-items: center;*/
+}
+
+.header__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__item {
+    margin-right: 48.25px;
+}
+
+.header__item:last-child {
+    margin-right: 0;
+}
+
+.header__link {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header__link:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #000000;
+    transition: width .3s ease-in-out;
+}
+
+.header__link:not(.header__link-active):hover:after,
+.header__link:not(.header__link-active):focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.header__link:active {
+    opacity: 0.75;
+}
+
+.header__link-active {
+    color: #00A092;
+    pointer-events: none;
+}
+
+.header__soc-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__social {
+    margin-right: 30px;
+}
+
+.header__social:last-child {
+    margin-right: 0px;
+}
+
+.header__soc_link:hover,
+.header__soc_link:focus {
+    opacity: 0.75;
+}
+
+/*      HEADER END          */
+
+
+@media only screen and (max-width: 1440px) {
+    /*      HEADER START        */
+    .header__wrapper {
+        width: 1240px;
+    }
+
+    /*      HEADER END        */
+}
+
+@media only screen and (max-width: 1200px) {
+    .header__wrapper {
+        width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    /*      HEADER START        */
+    .header__wrapper {
+        padding: 0 2rem;
+    }
+
+    .header__nav {
+        width: 700px;
+    }
+
+    .header__item:not(:last-child) {
+        margin-right: 2.4rem;
+    }
+
+    .header__social:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+
+    /*      HEADER END        */
+}
+
+@media only screen and (max-width: 1000px) {
+    /*      HEADER START        */
+    header {
+        position: fixed;
+        z-index: 999;
+    }
+
+    .header__wrapper {
+        width: 600px;
+        margin: 0;
+    }
+
+    .header__nav, .header__soc-list {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    /*      HEADER END          */
+}
+
+@media only screen and (max-width: 639px) {
+    /*      HEADER START        */
+    .header__wrapper {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    /*      HEADER END          */
+}
+
+/*      MAP START           */
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.head{
+    width: 601px;
+    margin-left: 406px;
+    padding-top: 40px;
+    margin-bottom: 70px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .head {
+        padding-top: 140px;
+    }
+}
+
+.head__style{
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 54px;
+line-height: 66px;
+text-align: center;
+text-transform: uppercase;
+color: #20113D;
+}
+.map{
+    position: relative;
+    width: 1406px;
+    height: 912px;
+    background: url(../../assets/images/Map.png) no-repeat center;
+    margin-bottom: 150px;
+}
+.border{
+    opacity: 0%;
+}
+.svg__croc{
+
+    position: absolute;
+    left: 19%;
+    top: 42%;
+}
+.svg__croc:last-child{
+    position: absolute;
+    left: 18.3%;
+    top: 41.3%;
+    opacity: 0;
+
+}
+.svg__lion{
+    position: absolute;
+    left: 39.3%;
+    top: 47.8%;
+}
+.svg__lion:last-child{
+    position: absolute;
+    left: 38.6%;
+    top: 46.6%;
+    opacity: 0;
+}
+.svg__lemur{
+
+    position: absolute;
+    left: 55%;
+    top: 64%;
+}
+.svg__lemur:last-child{
+    position: absolute;
+    left: 54.3%;
+    top: 62.88%;
+    opacity: 0;
+}
+.svg__gorilla{
+    position: absolute;
+    left: 47.5%;
+    top: 50%;
+}
+
+.svg__gorilla:last-child{
+    position: absolute;
+    left: 46.9%;
+    top: 49.0%;
+    opacity: 0;
+}
+.svg__coala{
+    position: absolute;
+    right: 10%;
+    bottom: 13%;
+}
+.svg__coala:last-child{
+    position: absolute;
+    right: 9.27%;
+    bottom: 11.7%;
+    opacity: 0;
+}
+.svg__tiger{
+    position: absolute;
+    right: 19.3%;
+    bottom: 26%;
+}
+.svg__tiger:last-child{
+    position: absolute;
+    right: 18.67%;
+    bottom: 24.7%;
+    opacity: 0;
+}
+.svg__panda{
+    position: absolute;
+    right: 23.5%;
+    top: 35.8%;
+
+}
+.svg__panda:last-child{
+    position: absolute;
+    right: 22.8%;
+    top: 35%;
+    opacity: 0;
+
+}
+.svg__eagle{
+    position: absolute;
+    left: 9.5%;
+    top: 40%;
+}
+.svg__eagle:last-child{
+    left: 8.8%;
+    top: 39%;
+    opacity: 0;
+ }
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.footer{
+    background: #20113D;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px ;
+}
+.footer__wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.upperpart{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.footer__logos{
+    width: 414px;
+
+}
+.footer__logos-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer__nav{
+    width: 429.5px;
+}
+.footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__link {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__button{
+    display: flex;
+    flex-wrap: wrap;
+    width: 359px;
+    height: 74px;
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    align-items: center;
+    padding: 0 15px 0 25px;
+}
+.footer__button:hover{
+    background-color: #00A092;
+    transition: linear 0.3s;
+}
+.footer__button:active{
+    transform: scale(1);
+    background-color:transparent;
+    opacity: 0.75;
+    transition: linear 0.1s;
+}
+.footer__button-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+.edge{
+    margin-top: 70px;
+    size:1px;
+    width: 1400px;
+}
+.under{
+    padding-top: 35px;
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 36px;
+    justify-content: space-between;
+
+}
+.under__style{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+.under__leftpart{
+    width: 446px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.under__rightpart{
+    width: 200px;
+}
+.under__social-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__link::after{
+
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #fff;
+    transition: width .3s ease-in-out;
+}
+.footer__link:hover:after,
+.footer__link:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.footer__link:active {
+    opacity: 0.75;
+}
+.under__social-link:hover{
+    opacity: 0.75;
+    transition: linear 0.3s;
+}
+.svg:hover .active{
+    fill: #FFFFFF;
+}
+.svg:hover .border{
+    opacity: 100%;
+}
+@media  (max-width:1919px)
+{
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.head{
+    margin-left: 300px;
+}
+}
+@media  (max-width:1400px)
+{
+    .map{
+    background: url(../../assets/images/Map1200.png) no-repeat center;
+    width: 1198px;
+    height: 777px;
+    margin-bottom: 100px
+    }
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.head{
+    margin-left: 298px;
+    margin-bottom: 17px;
+}
+
+.svg__croc{
+
+    position: absolute;
+    left: 18.5%;
+    top: 41%;
+}
+.svg__croc:last-child{
+    position: absolute;
+    left: 17.7%;
+    top: 40.1%;
+    opacity: 0;
+
+}
+.svg__lion{
+    position: absolute;
+    left: 38.3%;
+    top: 44.1%;
+}
+.svg__lion:last-child{
+    position: absolute;
+    left: 37.5%;
+    top: 42.9%;
+    opacity: 0;
+}
+.svg__lemur{
+
+    position: absolute;
+    left: 54.4%;
+    top: 60.75%;
+}
+.svg__lemur:last-child{
+    position: absolute;
+    left: 53.65%;
+    top: 59.88%;
+    opacity: 0;
+}
+.svg__gorilla{
+    position: absolute;
+    left: 46.74%;
+    top: 47.2%;
+}
+
+.svg__gorilla:last-child{
+    position: absolute;
+    left: 45.95%;
+    top: 46.0%;
+    opacity: 0;
+}
+.svg__coala{
+    position: absolute;
+    right: 9.1%;
+    bottom: 13%;
+}
+.svg__coala:last-child{
+    position: absolute;
+    right: 8.27%;
+    bottom: 11.5%;
+    opacity: 0;
+}
+.svg__tiger{
+    position: absolute;
+    right: 18.61%;
+    bottom: 24%;
+}
+.svg__tiger:last-child{
+    position: absolute;
+    right: 17.82%;
+    bottom: 22.5%;
+    opacity: 0;
+}
+.svg__panda{
+    position: absolute;
+    right: 18.8%;
+    top: 30.2%;
+
+}
+.svg__panda:last-child{
+    position: absolute;
+    right: 18.03%;
+    top: 29%;
+    opacity: 0;
+
+}
+.svg__eagle{
+    position: absolute;
+    left: 8.8%;
+    top: 38%;
+}
+.svg__eagle:last-child{
+    left: 8.0%;
+    top: 37.1%;
+    opacity: 0;
+ }
+}
+@media  (max-width:1199px)
+{
+    .map{
+    background: url(../../assets/images/Map640.svg) no-repeat center;
+    width: 640px;
+    height: 415px;
+    margin-bottom: 100px;
+    }
+    .wrapper{
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    .svg__croc{
+        position: absolute;
+        left: 19.74%;
+        top: 43.5%;
+        width: auto;
+        height: 74px;
+    }
+    .svg__croc:last-child{
+        position: absolute;
+        left: 19.44%;
+        top: 43.0%;
+        width: auto;
+        height: 78px;
+        opacity: 0;
+
+    }
+    .svg__lion{
+        position: absolute;
+    left: 40.18%;
+    top: 49%;
+    width: auto;
+        height: 74px;
+    }
+    .svg__lion:last-child{
+        position: absolute;
+    left: 39.92%;
+    top: 48.55%;
+    width: auto;
+    height: 78px;
+    opacity: 0;
+    }
+    .svg__lemur{
+
+        position: absolute;
+        left: 55.5%;
+        top: 64.5%;
+        width: auto;
+        height: 74px;
+    }
+    .svg__lemur:last-child{
+        position: absolute;
+    left: 55.25%;
+    top: 64%;
+    width: auto;
+    height: 78px;
+    opacity: 0;
+    }
+    .svg__gorilla{
+        position: absolute;
+    left: 47.91%;
+    top: 51%;
+    width: auto;
+        height: 74px;
+    }
+
+    .svg__gorilla:last-child{
+        position: absolute;
+        left: 47.61%;
+        top: 50.5%;
+        opacity: 0;
+        width: auto;
+    height: 78px;
+    }
+    .svg__coala{
+        position: absolute;
+        left: 78.55%;
+        top: 67%;
+        width: auto;
+        height: 74px;
+    }
+    .svg__coala:last-child{
+        position: absolute;
+        left: 78.35%;
+        top: 66.5%;
+        opacity: 0;
+        width: auto;
+        height: 78px;
+    }
+    .svg__tiger{
+        position: absolute;
+    left: 71.3%;
+    top: 57%;
+    width: auto;
+        height: 74px;
+    }
+    .svg__tiger:last-child{
+        position: absolute;
+    left: 71.05%;
+    top: 56.5%;
+    opacity: 0;
+    width: auto;
+    height: 78px;
+    }
+    .svg__panda{
+        position: absolute;
+        left: 71%;
+        top: 35.78%;
+        width: auto;
+        height: 74px;
+
+    }
+    .svg__panda:last-child{
+        position: absolute;
+    left: 70.72%;
+    top: 35.5%;
+    opacity: 0;
+    width: auto;
+    height: 78px;
+
+    }
+    .svg__eagle{
+        position: absolute;
+        left: 10.6%;
+        top: 43.8%;
+        width: auto;
+        height: 74px;
+    }
+    .svg__eagle:last-child{
+    left: 10.25%;
+    top: 43.5%;
+    opacity: 0;
+    width: auto;
+    height: 78px;
+     }
+      .head{
+          margin-left: 20px;
+          margin-bottom: 50px;
+      }
+      .head__style{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 51px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+}
+
+@media  (max-width:639px)
+{
+    .map{
+    background: url(../../assets/images/Group\ 19.png) no-repeat center;
+    width: 362px;
+    height: 234px;
+    margin-bottom: 0;
+    }
+    .wrapper{
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .svg__croc{
+        position: absolute;
+        left: 14.74%;
+        top: 39.2%;
+        width: auto;
+        height: 66px;
+    }
+    .svg__croc:last-child{
+        position: absolute;
+        left: 14.25%;
+        top: 38.7%;
+        width: auto;
+        height: 70px;
+        opacity: 0;
+
+    }
+    .svg__lion{
+        position: absolute;
+    left: 37.18%;
+    top: 40%;
+    width: auto;
+        height: 66px;
+    }
+    .svg__lion:last-child{
+        position: absolute;
+    left: 36.82%;
+    top: 39.55%;
+    width: auto;
+    height: 70px;
+    opacity: 0;
+    }
+    .svg__lemur{
+
+        position: absolute;
+        left: 53.8%;
+        top: 58.5%;
+        width: auto;
+        height: 66px;
+    }
+    .svg__lemur:last-child{
+        position: absolute;
+    left: 53.25%;
+    top: 58%;
+    width: auto;
+    height: 70px;
+    opacity: 0;
+    }
+    .svg__gorilla{
+        position: absolute;
+    left: 45.51%;
+    top: 48.4%;
+    width: auto;
+        height: 66px;
+    }
+
+    .svg__gorilla:last-child{
+        position: absolute;
+        left: 44.91%;
+        top: 47.7%;
+        opacity: 0;
+        width: auto;
+    height: 70px;
+    }
+    .svg__coala{
+        position: absolute;
+        left: 81.55%;
+        top: 64.8%;
+        width: auto;
+        height: 66px;
+    }
+    .svg__coala:last-child{
+        position: absolute;
+        left: 81.0%;
+        top: 64.0%;
+        opacity: 0;
+        width: auto;
+        height: 70px;
+    }
+    .svg__tiger{
+        position: absolute;
+    left: 72.8%;
+    top: 52.6%;
+    width: auto;
+        height: 66px;
+    }
+    .svg__tiger:last-child{
+        position: absolute;
+    left: 72.25%;
+    top: 52.3%;
+    opacity: 0;
+    width: auto;
+    height: 70px;
+    }
+    .svg__panda{
+        position: absolute;
+        left: 66.9%;
+        top: 31.48%;
+        width: auto;
+        height: 66px;
+
+    }
+    .svg__panda:last-child{
+        position: absolute;
+    left: 66.45%;
+    top: 30.95%;
+    opacity: 0;
+    width: auto;
+    height: 70px;
+
+    }
+    .svg__eagle{
+        position: absolute;
+        left: 2.6%;
+        top: 35.8%;
+        width: auto;
+        height: 66px;
+    }
+    .svg__eagle:last-child{
+    left: 1.95%;
+    top: 35.0%;
+    opacity: 0;
+    width: auto;
+    height: 70px;
+     }
+      .head{
+          margin-left: 20px;
+      }
+      .head__style{
+        font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 26px;
+line-height: 130%;
+text-align: center;
+}
+}
+@media (max-width:320px){
+    .wrapper{
+        max-width: none;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 639px){
+.footer {
+    margin-top: 50px;
+}
+}
+
+
